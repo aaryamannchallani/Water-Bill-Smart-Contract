@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.6.7;
 contract waterBill{
     address payable admin;
      uint public rateperliter;
@@ -41,7 +41,7 @@ contract waterBill{
         User.name=_name;
         User.water=_waterconsumed;
         User.addr=_Physicaladdress;
-        Useraccts.push(_address) -1;
+        Useraccts.push(_address);
     emit NewUser(_name,_address,_waterconsumed);
      }
       function setBill(address _address) public onlyAdmin() RateSet() returns(uint){
